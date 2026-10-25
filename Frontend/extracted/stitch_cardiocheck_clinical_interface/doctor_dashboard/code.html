@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-container":"#006f66","surface-container-low":"#eff4ff","error":"#ba1a1a","on-secondary":"#ffffff","secondary-fixed-dim":"#6bd8cb","tertiary-fixed":"#dce1ff","on-error":"#ffffff","on-tertiary-fixed-variant":"#264191","surface-variant":"#d3e4fe","surface-bright":"#f8f9ff","on-error-container":"#93000a","on-primary":"#ffffff","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","secondary":"#006a61","inverse-primary":"#b3c9e0","on-primary-fixed-variant":"#34495c","primary-fixed":"#cfe5fd","on-surface":"#0b1c30","on-secondary-fixed-variant":"#005049","surface-container":"#e5eeff","outline-variant":"#c3c7cd","on-primary-fixed":"#061d2f","secondary-container":"#86f2e4","on-secondary-fixed":"#00201d","tertiary":"#000a30","on-tertiary":"#ffffff","primary-container":"#0f2537","surface-tint":"#4c6075","on-primary-container":"#788da3","surface-container-lowest":"#ffffff","outline":"#74777d","on-surface-variant":"#43474c","error-container":"#ffdad6","on-tertiary-fixed":"#00164e","surface-dim":"#cbdbf5","tertiary-container":"#001d60","tertiary-fixed-dim":"#b6c4ff","on-background":"#0b1c30","background":"#f8f9ff","secondary-fixed":"#89f5e7","on-tertiary-container":"#6e87db","inverse-surface":"#213145","primary":"#000f1d","primary-fixed-dim":"#b3c9e0","surface":"#f8f9ff","surface-container-high":"#dce9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","gutter-mobile":"1rem","margin-mobile":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","margin":"2rem","space-xl":"2.5rem","gutter":"1.5rem","space-md":"1rem"},"fontFamily":{"headline-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"headline-xl-mobile":["Inter"],"label-data-lg":["JetBrains Mono"],"body-sm":["Inter"],"label-ui":["Inter"],"headline-lg-mobile":["Inter"],"headline-xl":["Inter"],"body-md":["Inter"],"label-data-md":["JetBrains Mono"],"label-data-sm":["JetBrains Mono"]},"fontSize":{"headline-md":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-data-lg":["1.25rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"label-ui":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg-mobile":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-data-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0em","fontWeight":"500"}],"label-data-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="CardioCheck Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VKh25hZk2v8Vo1rb1uASLLszwhPOqiOf6NEWOFEWsfvJzekWZxHmYi-jWXpulUDNsDSFSZplDNhTeBqmhSTOAgLgBw78ovrIbMnI22YrM_I_qTy4CurkufzXfRoXZ0KD8Jkl2Z-Sr9OOZCeuxVc_WKrax8msxO3UGNZKfTszg-kXdcBpEyWAe2gxMwKQ5k_r-zlW1msMswZc1nNR6GoDRSpj5CX41WAD8ev7ApnesJK7DLh8IvJOlUiF8"/><div class="flex flex-col leading-tight"><span class="font-headline-md text-headline-md text-primary tracking-tight">CardioCheck</span><span class="font-label-ui text-label-ui text-on-surface-variant uppercase">Clinical Decision Support</span></div></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-headline-md"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-headline-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="patients" href="#"><span class="material-symbols-outlined text-[20px]">personal_injury</span><span class="font-body-md text-body-md">Patients</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="assessments" href="#"><span class="material-symbols-outlined text-[20px]">cardiology</span><span class="font-body-md text-body-md">Assessments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">summarize</span><span class="font-body-md text-body-md">Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Settings</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-low"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container text-on-secondary-container"><span class="material-symbols-outlined text-[16px]">science</span><span class="font-label-data-sm text-label-data-sm uppercase font-semibold">Clinical Demo Data</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span class="font-body-sm text-body-sm font-medium">Sign Out</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1"><div class="relative w-80"><span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-3 py-1.5 bg-surface-container-low rounded-lg text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container focus:text-on-surface transition-all" placeholder="Search patient MRN, name, or record..." type="text"/></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low text-on-surface-variant"><span class="h-2 w-2 rounded-full bg-secondary"></span><span class="font-label-data-sm text-label-data-sm">FastAPI Backend: Connected | Model: LogisticRegression (Cleveland v1)</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs bg-primary-container text-on-primary hover:bg-primary px-space-md py-1.5 rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">person_add</span><span class="font-label-ui text-label-ui">+ Add Patient</span></button><button aria-label="Clinical Alerts" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC30qU5X-LVjp90orUpiWXL9vnCImhRRssG6YAq37bQ7VBrVXdzXk1CnLCwzPPf8Huf3tvgGNTMt2jNSFdtBtTURxUgjNNbyWVZa3rbCbzbrexSOPzXCJjvUb2ozRv1aM_1lsDOdKjrcrj32lFn7yE0zoaKH_eJqJnNHp6eziAhI43Bw0q4q1hWfXcTtvb2dhUw0pL5t24WZ8ZIRAsgvxzSMGAQrgtlH50VD83VOvJCUfcIut1TAx8_"/><div class="hidden md:flex flex-col text-left"><span class="font-label-ui text-label-ui text-on-surface font-semibold">Dr. Sarah Jenkins, MD</span><span class="font-body-sm text-body-sm text-on-surface-variant">Cardiology Dept</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_drop_down</span></div></div></header><main class="relative pt-16 w-full min-h-screen px-space-lg py-space-lg bg-surface"><div class="flex flex-col w-full">
+<!-- Dynamic Clinical Greeting Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-data-sm text-label-data-sm tracking-wider uppercase">Cleveland Clinic Cohort Reference</span>
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-ui text-label-ui text-secondary font-semibold">Active Session</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Welcome back, Dr. Jenkins — Clinical Decision Support Hub</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Demonstration environment. Powered by Cleveland Dataset-trained Logistic Regression.</p>
+</div>
+<!-- Quick Actions Header Segment -->
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="group flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high shadow-sm transition-all duration-200" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">cardiology</span>
+<span class="font-label-ui text-label-ui">Start New Assessment</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container shadow-sm transition-all duration-200" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span class="font-label-ui text-label-ui">+ Add Patient</span>
+</button>
+</div>
+</div>
+<!-- KPI Metric Overview Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Total Patients -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant">Total Patients</span>
+<div class="h-8 w-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-data-lg text-label-data-lg text-primary text-2xl font-bold">248</span>
+<div class="flex items-center gap-0.5 text-on-secondary-container bg-secondary-container/20 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span class="font-label-data-sm text-label-data-sm font-semibold">+12 this mo</span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="mt-3 pt-2">
+<svg class="w-full h-5 text-secondary" fill="none" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0 16 L20 14 L40 17 L60 8 L80 10 L100 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Recent Assessments -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant">Recent Assessments</span>
+<div class="h-8 w-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-data-lg text-label-data-lg text-primary text-2xl font-bold">38</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">past 7 days</span>
+</div>
+<div class="mt-3 pt-2">
+<svg class="w-full h-5 text-primary-container" fill="none" preserveaspectratio="none" viewbox="0 0 100 20">
+<path d="M0 12 L18 10 L35 15 L52 7 L70 12 L85 6 L100 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Awaiting Review (Urgent Amber Priority) -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant">Awaiting Review</span>
+<div class="h-8 w-8 rounded-lg bg-amber-50 flex items-center justify-center text-amber-700">
+<span class="material-symbols-outlined text-[20px]">priority_high</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-data-lg text-label-data-lg text-primary text-2xl font-bold">5</span>
+<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-data-sm text-label-data-sm font-semibold flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-amber-600 animate-pulse"></span> Requires action
+        </span>
+</div>
+<div class="mt-3 pt-2">
+<div class="h-2 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+</div>
+<!-- Follow-up Scheduled -->
+<div class="relative overflow-hidden p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant">Follow-ups Scheduled</span>
+<div class="h-8 w-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-label-data-lg text-label-data-lg text-primary text-2xl font-bold">14</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">scheduled this week</span>
+</div>
+<div class="mt-3 pt-2">
+<div class="flex gap-1 h-5 items-end">
+<span class="w-full bg-surface-container h-2 rounded-t"></span>
+<span class="w-full bg-surface-container h-3 rounded-t"></span>
+<span class="w-full bg-secondary h-5 rounded-t"></span>
+<span class="w-full bg-surface-container h-3.5 rounded-t"></span>
+<span class="w-full bg-surface-container h-2.5 rounded-t"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Section: Diagnostic Assessment Queue & Workbench -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-sm mb-space-lg overflow-hidden">
+<!-- Header & Interactive Filter Bar -->
+<div class="p-space-lg flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">Recent Patient Assessments &amp; Clinical Queue</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-data-sm text-label-data-sm">5 Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Cleveland v1 Logistic Regression output mapping (binary presence ≥ 50% diameter narrowing)</p>
+</div>
+<!-- Filters & Search Toolbar -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Search Input -->
+<div class="relative min-w-[260px] flex-1 sm:flex-initial">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 bg-surface rounded-lg text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-low transition-all" id="patientQueueSearch" placeholder="Search Patient Name or ID..." type="text"/>
+</div>
+<!-- Filter: Status -->
+<div class="flex items-center rounded-lg bg-surface p-1">
+<button class="px-3 py-1 text-on-primary bg-primary rounded-md font-label-ui text-label-ui transition-colors" id="filterAll" type="button">All</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface rounded-md font-label-ui text-label-ui transition-colors" id="filterPending" type="button">Pending Review</button>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface rounded-md font-label-ui text-label-ui transition-colors" id="filterReviewed" type="button">Reviewed</button>
+</div>
+<!-- Filter: Classification -->
+<div class="relative">
+<select class="appearance-none bg-surface text-on-surface font-label-ui text-label-ui pl-3 pr-8 py-2 rounded-lg cursor-pointer focus:outline-none" id="classificationSelect">
+<option value="ALL">All Inferences</option>
+<option value="CLASS_0">Class 0 (No Heart Disease)</option>
+<option value="CLASS_1">Class 1 (Heart Disease Present)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 top-2.5 text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Reset / Refresh -->
+<button class="p-2 rounded-lg bg-surface text-on-surface-variant hover:text-primary transition-colors" id="resetFiltersBtn" title="Reset View" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Tabular Patient Queue -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface text-on-surface-variant font-label-ui text-label-ui uppercase tracking-wider">
+<th class="py-3 px-space-lg">Patient Ref ID</th>
+<th class="py-3 px-space-md">Patient Demographics</th>
+<th class="py-3 px-space-md">Assessment Timestamp</th>
+<th class="py-3 px-space-md">ML Classification (LR Cleveland)</th>
+<th class="py-3 px-space-md">Review Status</th>
+<th class="py-3 px-space-lg text-right">Clinical Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0" id="patientQueueTableBody">
+<!-- Row 1: Eleanor Vance -->
+<tr class="queue-row hover:bg-surface-container-low/50 transition-colors" data-class="CLASS_1" data-id="PT-8821" data-name="Eleanor Vance" data-status="pending">
+<td class="py-3.5 px-space-lg whitespace-nowrap">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-data-md text-label-data-md text-primary font-semibold">PT-8821</span>
+<span class="material-symbols-outlined text-amber-600 text-[16px]" title="Priority Review Flag">flag</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">Eleanor Vance</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">62 Y / Female • RestBP: 145 • Chol: 282</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-data-sm text-label-data-sm text-on-surface">Oct 24, 2024</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">14:15 EDT</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-data-sm text-label-data-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span>
+                Class 1 (Heart Disease Category)
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 font-label-ui text-label-ui font-semibold">
+<span class="material-symbols-outlined text-[14px]">pending</span>
+                Pending Review
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container font-label-ui text-label-ui text-on-surface transition-colors" onclick="alert('Opening Eleanor Vance clinical chart PT-8821')" type="button">Open Profile</button>
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-ui text-label-ui hover:bg-primary transition-colors" onclick="alert('Launching Cleveland Model Assessment Engine for Eleanor Vance')" type="button">Assess</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="View Full Report" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Marcus Brody -->
+<tr class="queue-row hover:bg-surface-container-low/50 transition-colors" data-class="CLASS_0" data-id="PT-8819" data-name="Marcus Brody" data-status="reviewed">
+<td class="py-3.5 px-space-lg whitespace-nowrap">
+<span class="font-label-data-md text-label-data-md text-primary font-semibold">PT-8819</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">Marcus Brody</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">54 Y / Male • RestBP: 120 • Chol: 198</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-data-sm text-label-data-sm text-on-surface">Oct 24, 2024</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">11:30 EDT</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container font-label-data-sm text-label-data-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+                Class 0 (No Heart Disease Category)
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-ui text-label-ui font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                Reviewed by Dr. Jenkins
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container font-label-ui text-label-ui text-on-surface transition-colors" onclick="alert('Opening Marcus Brody chart PT-8819')" type="button">Open Profile</button>
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container text-on-surface font-label-ui text-label-ui transition-colors" type="button">New Assessment</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="View Full Report" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: David Chen -->
+<tr class="queue-row hover:bg-surface-container-low/50 transition-colors" data-class="CLASS_0" data-id="PT-8794" data-name="David Chen" data-status="reviewed">
+<td class="py-3.5 px-space-lg whitespace-nowrap">
+<span class="font-label-data-md text-label-data-md text-primary font-semibold">PT-8794</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">David Chen</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">48 Y / Male • RestBP: 132 • Chol: 215</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-data-sm text-label-data-sm text-on-surface">Oct 23, 2024</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">16:45 EDT</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/30 text-on-secondary-container font-label-data-sm text-label-data-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+                Class 0 (No Heart Disease Category)
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-ui text-label-ui font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                Reviewed by Dr. Jenkins
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container font-label-ui text-label-ui text-on-surface transition-colors" onclick="alert('Opening David Chen chart PT-8794')" type="button">Open Profile</button>
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container text-on-surface font-label-ui text-label-ui transition-colors" type="button">New Assessment</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="View Full Report" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Sarah Miller -->
+<tr class="queue-row hover:bg-surface-container-low/50 transition-colors" data-class="CLASS_1" data-id="PT-8782" data-name="Sarah Miller" data-status="reviewed">
+<td class="py-3.5 px-space-lg whitespace-nowrap">
+<span class="font-label-data-md text-label-data-md text-primary font-semibold">PT-8782</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">Sarah Miller</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">67 Y / Female • RestBP: 155 • Chol: 304</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-data-sm text-label-data-sm text-on-surface">Oct 22, 2024</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">09:20 EDT</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-data-sm text-label-data-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span>
+                Class 1 (Heart Disease Category)
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-ui text-label-ui font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                Reviewed by Dr. Jenkins
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container font-label-ui text-label-ui text-on-surface transition-colors" onclick="alert('Opening Sarah Miller chart PT-8782')" type="button">Open Profile</button>
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container text-on-surface font-label-ui text-label-ui transition-colors" type="button">New Assessment</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="View Full Report" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: James Reynolds -->
+<tr class="queue-row hover:bg-surface-container-low/50 transition-colors" data-class="CLASS_1" data-id="PT-8760" data-name="James Reynolds" data-status="reviewed">
+<td class="py-3.5 px-space-lg whitespace-nowrap">
+<span class="font-label-data-md text-label-data-md text-primary font-semibold">PT-8760</span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">James Reynolds</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">59 Y / Male • RestBP: 140 • Chol: 260</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-data-sm text-label-data-sm text-on-surface">Oct 21, 2024</span>
+<span class="font-label-data-sm text-label-data-sm text-on-surface-variant">15:10 EDT</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-data-sm text-label-data-sm font-semibold">
+<span class="h-1.5 w-1.5 rounded-full bg-error"></span>
+                Class 1 (Heart Disease Category)
+              </span>
+</td>
+<td class="py-3.5 px-space-md whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-ui text-label-ui font-medium">
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+                Reviewed by Dr. Jenkins
+              </span>
+</td>
+<td class="py-3.5 px-space-lg text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container font-label-ui text-label-ui text-on-surface transition-colors" onclick="alert('Opening James Reynolds chart PT-8760')" type="button">Open Profile</button>
+<button class="px-2.5 py-1 rounded bg-surface hover:bg-surface-container text-on-surface font-label-ui text-label-ui transition-colors" type="button">New Assessment</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors" title="View Full Report" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Empty State View (Toggled dynamically or via test shortcut) -->
+<div class="hidden py-12 px-space-md flex-col items-center justify-center text-center" id="queueEmptyState">
+<div class="h-12 w-12 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant mb-3">
+<span class="material-symbols-outlined text-[24px]">inbox</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-1">No Assessments Found</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-4">No patients matched your search filters. Clear filters to see available cohort records or create a new assessment record.</p>
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-ui text-label-ui hover:bg-surface-container-high transition-colors" id="clearFiltersAction" type="button">Clear All Filters</button>
+</div>
+</div>
+<!-- Table Footer Meta -->
+<div class="px-space-lg py-3 bg-surface flex flex-col sm:flex-row items-center justify-between text-on-surface-variant gap-space-sm font-label-data-sm text-label-data-sm">
+<div class="flex items-center gap-space-sm">
+<span>Showing <strong class="text-primary font-semibold">5</strong> of 38 recent records</span>
+<span>•</span>
+<span>Model accuracy Cleveland Holdout: <strong class="text-secondary font-semibold">84.2%</strong></span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors disabled:opacity-40" disabled="">Previous</button>
+<span class="px-2 py-1 bg-primary text-on-primary rounded text-xs">1</span>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- Bottom Workspace: Clinical Shortcuts & Secondary Diagnostic Aids -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Quick Parameter Entry Stepper Shortcut -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">flash_on</span>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Express Diagnostic Run</h3>
+</div>
+<span class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant">Step 1 of 4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Rapidly enter standard Cleveland parameters (Age, CP, Resting BP, ST Slope) for urgent triage classification.</p>
+<div class="space-y-space-sm mb-space-md">
+<div class="flex items-center justify-between p-2 rounded bg-surface">
+<span class="font-label-ui text-label-ui text-on-surface">Target Patient:</span>
+<span class="font-label-data-sm text-label-data-sm text-primary font-semibold">PT-8821 (Eleanor Vance)</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface">
+<span class="font-label-ui text-label-ui text-on-surface">Active Algorithm:</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary font-semibold">Cleveland_LogReg_v1.0.joblib</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="w-full py-2 px-space-sm bg-primary text-on-primary rounded-lg font-label-ui text-label-ui hover:bg-primary-container transition-colors text-center" onclick="alert('Redirecting to full assessment input wizard.')" type="button">
+          Continue Wizard →
+        </button>
+</div>
+</div>
+<!-- Diagnostic Model Distribution & Performance -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Cohort Risk Distribution</h3>
+</div>
+<span class="font-label-ui text-label-ui uppercase tracking-wider text-on-surface-variant">Ward 4B</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Real-time classification split across active inpatient telemetry monitors.</p>
+<!-- Donut / Horizontal Bar Visualization -->
+<div class="space-y-3 mb-space-sm">
+<div>
+<div class="flex justify-between font-label-ui text-label-ui mb-1">
+<span class="text-on-surface">Class 0: Negative / Low Risk</span>
+<span class="font-label-data-sm text-label-data-sm text-secondary">64.5% (160)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 64.5%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-ui text-label-ui mb-1">
+<span class="text-on-surface">Class 1: Coronary Artery Disease Suspicion</span>
+<span class="font-label-data-sm text-label-data-sm text-error">35.5% (88)</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-error h-2 rounded-full" style="width: 35.5%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-on-surface-variant font-label-data-sm text-label-data-sm">
+<span>Sensitivity: 86.1%</span>
+<span>Specificity: 82.4%</span>
+<span>AUC: 0.912</span>
+</div>
+</div>
+<!-- Rapid Patient Quick Register Widget -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">badge</span>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Quick Intake Shortcut</h3>
+</div>
+<button class="font-label-ui text-label-ui text-on-surface-variant underline hover:text-primary" id="toggleEmptyDemoBtn" type="button">Demo Empty View</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Initiate rapid record creation for emergency admittance triage.</p>
+<form class="space-y-2.5" onsubmit="event.preventDefault(); alert('Demo: Patient PT-8822 generated and queued.');">
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface mb-1">Patient Full Name</label>
+<input class="w-full px-3 py-1.5 bg-surface rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-low transition-all" placeholder="e.g. Robert Kowalski" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface mb-1">Age</label>
+<input class="w-full px-3 py-1.5 bg-surface rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-low transition-all" max="100" min="18" placeholder="58" type="number"/>
+</div>
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface mb-1">Sex</label>
+<select class="w-full px-3 py-1.5 bg-surface rounded-lg text-on-surface font-body-sm text-body-sm focus:outline-none">
+<option value="1">Male</option>
+<option value="0">Female</option>
+</select>
+</div>
+</div>
+<button class="w-full mt-2 py-2 px-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-label-ui text-label-ui transition-colors" type="submit">
+            Register &amp; Begin Evaluation
+          </button>
+</form>
+</div>
+</div>
+</div>
+<!-- Mandatory Clinical Disclaimer Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center gap-space-sm text-on-surface-variant">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">gavel</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-ui text-label-ui uppercase tracking-wider font-semibold text-primary">Demonstration Data Only • Clinical Decision Support Disclaimer</span>
+<p class="font-body-sm text-body-sm leading-relaxed">
+        CardioCheck's Logistic Regression model is trained on the Cleveland Heart Disease Dataset and is not yet clinically validated. Outputs represent statistical classification within dataset bounds, not definitive diagnoses. Always corroborate model probabilistic scores with comprehensive echocardiograms, angiograms, and primary physician assessment.
+      </p>
+</div>
+</div>
+</div>
+<!-- Inline JavaScript for Table Filtering and Micro-interactions -->
+<script>
+  (function initDashboard() {
+    const searchInput = document.getElementById('patientQueueSearch');
+    const filterAll = document.getElementById('filterAll');
+    const filterPending = document.getElementById('filterPending');
+    const filterReviewed = document.getElementById('filterReviewed');
+    const classSelect = document.getElementById('classificationSelect');
+    const resetBtn = document.getElementById('resetFiltersBtn');
+    const clearFiltersAction = document.getElementById('clearFiltersAction');
+    const toggleEmptyDemoBtn = document.getElementById('toggleEmptyDemoBtn');
+    
+    const rows = document.querySelectorAll('.queue-row');
+    const emptyState = document.getElementById('queueEmptyState');
+
+    let currentStatus = 'all';
+
+    function setFilterActive(activeBtn) {
+      [filterAll, filterPending, filterReviewed].forEach(b => {
+        b.className = 'px-3 py-1 text-on-surface-variant hover:text-on-surface rounded-md font-label-ui text-label-ui transition-colors';
+      });
+      activeBtn.className = 'px-3 py-1 text-on-primary bg-primary rounded-md font-label-ui text-label-ui transition-colors';
+    }
+
+    function applyFilters() {
+      const query = (searchInput.value || '').trim().toLowerCase();
+      const selectedClass = classSelect.value;
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const pId = (row.getAttribute('data-id') || '').toLowerCase();
+        const pName = (row.getAttribute('data-name') || '').toLowerCase();
+        const status = row.getAttribute('data-status') || '';
+        const cClass = row.getAttribute('data-class') || '';
+
+        const matchesQuery = !query || pId.includes(query) || pName.includes(query);
+        const matchesStatus = currentStatus === 'all' || status === currentStatus;
+        const matchesClass = selectedClass === 'ALL' || cClass === selectedClass;
+
+        if (matchesQuery && matchesStatus && matchesClass) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilters);
+    }
+
+    if (filterAll) {
+      filterAll.addEventListener('click', () => {
+        currentStatus = 'all';
+        setFilterActive(filterAll);
+        applyFilters();
+      });
+    }
+
+    if (filterPending) {
+      filterPending.addEventListener('click', () => {
+        currentStatus = 'pending';
+        setFilterActive(filterPending);
+        applyFilters();
+      });
+    }
+
+    if (filterReviewed) {
+      filterReviewed.addEventListener('click', () => {
+        currentStatus = 'reviewed';
+        setFilterActive(filterReviewed);
+        applyFilters();
+      });
+    }
+
+    if (classSelect) {
+      classSelect.addEventListener('change', applyFilters);
+    }
+
+    function resetFilters() {
+      if (searchInput) searchInput.value = '';
+      if (classSelect) classSelect.value = 'ALL';
+      currentStatus = 'all';
+      setFilterActive(filterAll);
+      applyFilters();
+    }
+
+    if (resetBtn) resetBtn.addEventListener('click', resetFilters);
+    if (clearFiltersAction) clearFiltersAction.addEventListener('click', resetFilters);
+
+    if (toggleEmptyDemoBtn) {
+      let isForcedEmpty = false;
+      toggleEmptyDemoBtn.addEventListener('click', () => {
+        isForcedEmpty = !isForcedEmpty;
+        if (isForcedEmpty) {
+          rows.forEach(r => r.style.display = 'none');
+          emptyState.classList.remove('hidden');
+          emptyState.classList.add('flex');
+          toggleEmptyDemoBtn.textContent = 'Restore Data';
+        } else {
+          resetFilters();
+          toggleEmptyDemoBtn.textContent = 'Demo Empty View';
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>
