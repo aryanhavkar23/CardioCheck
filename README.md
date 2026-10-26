@@ -2,6 +2,8 @@
 
 An end-to-end clinical decision support platform combining an authentic Google Stitch medical UI with a Python FastAPI backend powered by a machine-learning model trained on the Cleveland Heart Disease dataset.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/aryanhavkar23/CardioCheck)
+
 ---
 
 ## System Architecture
@@ -71,3 +73,17 @@ Output:
 ```
 ====================== 20 passed in ~38s ======================
 ```
+
+---
+
+## Cloud Deployment (Render Blueprint)
+
+CardioCheck includes a validated `render.yaml` blueprint that provisions:
+1. **PostgreSQL Database** (`cardiocheck-db`): Persistent managed database with auto-generated credentials.
+2. **FastAPI Web Service** (`cardiocheck-backend`): Python 3.11 service with auto-wired PostgreSQL connection string, dynamic JWT secret, and ML model inference.
+3. **Static Site** (`cardiocheck-frontend`): High-speed Vite SPA deployed on Render's global CDN with client-side routing rewrites.
+
+### 1-Click Deployment
+Click the badge at the top or visit:
+**[Deploy CardioCheck on Render](https://render.com/deploy?repo=https://github.com/aryanhavkar23/CardioCheck)**
+
