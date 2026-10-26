@@ -40,10 +40,9 @@ services:
   # ==============================================================================
   # 2. CardioCheck Stitch Medical Frontend (Static Site)
   # ==============================================================================
-  - type: static
+  - type: web
     name: cardiocheck-frontend
-    region: oregon
-    plan: free
+    runtime: static
     rootDir: Frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
